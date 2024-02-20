@@ -59,7 +59,7 @@ console.log(subtrair.substr(31, 23));
 
 //"Amor é a melhor coisa neste mundo. Alguns encontraram seu amor e alguns ainda estão procurando pelo seu amor." Contar o número de palavras amor nesta frase.
 let count = "Amor é a melhor coisa neste mundo. Alguns encontraram seu amor e alguns ainda estão procurando pelo seu amor."
-console.log(count.match(/amor/g).length)
+console.log(count.match(/amor/gi).length)
 
 //Use match() para contar os números de todos os because na seguinte frase: 'You cannot end a sentence with because because because is a conjunction'.
 let countBecause = 'You cannot end a sentence with because because because is a conjunction'
