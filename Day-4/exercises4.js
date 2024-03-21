@@ -80,6 +80,114 @@ if(notaAluno >= 90 && notaAluno <= 100){
   console.log("Digite uma nota válida")
 }
 
+//Verifique se a estação é Outono, Inverno, Primavera ou Verão. Se a entrada do usuário for:
+//Setembro, Outubro ou Novembro, a estação é Outono.
+//Dezembro, Janeiro ou Fevereiro, a estação é Inverno.
+//Março, Abril ou Maio, a estação é Primavera
+//Junho, Julho ou Agosto, a estação é Verão
+console.log("%c Exercício 6", "color: #FF0000")
+let userInput = prompt("Digite o mês:").toLowerCase();
+let season;
+
+switch (userInput) {
+  case 'setembro':
+  case 'outubro':
+  case 'novembro':
+    season = 'Outono';
+    break;
+  case 'dezembro':
+  case 'janeiro':
+  case 'fevereiro':
+    season = 'Inverno';
+    break;
+  case 'março':
+  case 'abril':
+  case 'maio':
+    season = 'Primavera';
+    break;
+  case 'junho':
+  case 'julho':
+  case 'agosto':
+    season = 'Verão';
+    break;
+  default:
+    season = 'Mês inválido';
+}
+
+console.log(`O mês de ${userInput} corresponde à estação ${season}.`);
+
+//Verifique se um dia é dia de semana ou um dia útil. Seu script receberá o dia como entrada.
+//Qual é o dia hoje? Sábado
+//Sábado é um fim de semana.
+
+//Qual é o dia hoje? sábaDo
+//Sábado é um fim de semana.
+
+//Qual é o dia hoje? Sexta-feira
+//Sexta-feira é um dia útil.
+
+//Qual é o dia hoje? sexTA-feiRa
+//Sexta-feira é um dia útil.
+console.log("%c Exercício 7", "color: #FF0000")
+let dayType = prompt("Qual é o dia hoje?").toLowerCase();
+let day;
+
+switch (dayType) {
+  case 'segunda-feira':
+  case 'terça-feira':
+  case 'quarta-feira':
+  case 'quinta-feira':
+  case 'sexta-feira':
+    day = 'dia útil';
+    break;
+  case 'sábado':
+  case 'domingo':
+    day = 'fim de semana';
+    break;
+  default:
+    day = 'dia inválido';
+}
+
+console.log(`${dayType} é um ${day}.`);
+
+//Escreva um programa que informe o número de dias em um mês.
+//Digite um mês: Janeiro
+//Janeiro tem 31 dias.
+
+//Digite um mês: FEvereiro
+//Fevereiro tem 28 dias.
+console.log("%c Exercício 8", "color: #FF0000")
+let month = prompt("Digite um mês:").toLowerCase();
+let daysInMonth;
+
+switch (month) {
+  case 'janeiro':
+  case 'março':
+  case 'maio':
+  case 'julho':
+  case 'agosto':
+  case 'outubro':
+  case 'dezembro':
+    daysInMonth = 31;
+    break;
+  case 'abril':
+  case 'junho':
+  case 'setembro':
+  case 'novembro':
+    daysInMonth = 30;
+    break;
+  case 'fevereiro':
+    daysInMonth = 28;
+    break;
+  default:
+    console.log("Mês inválido");
+}
+
+if (daysInMonth) {
+  console.log(`${month} tem ${daysInMonth} dias.`);
+}
+
+
 
 
 
