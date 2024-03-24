@@ -129,26 +129,26 @@ console.log(`O mês de ${userInput} corresponde à estação ${season}.`);
 //Qual é o dia hoje? sexTA-feiRa
 //Sexta-feira é um dia útil.
 console.log("%c Exercício 7", "color: #FF0000")
-let dayType = prompt("Qual é o dia hoje?").toLowerCase();
-let day;
+let day = prompt("Qual é o dia hoje?").toLowerCase();
+let dayType;
 
-switch (dayType) {
+switch (day) {
   case 'segunda-feira':
   case 'terça-feira':
   case 'quarta-feira':
   case 'quinta-feira':
   case 'sexta-feira':
-    day = 'dia útil';
+    dayType = 'dia útil';
     break;
   case 'sábado':
   case 'domingo':
-    day = 'fim de semana';
+    dayType = 'fim de semana';
     break;
   default:
-    day = 'dia inválido';
+    dayType = 'dia inválido';
 }
 
-console.log(`${dayType} é um ${day}.`);
+console.log(`${day} é um ${dayType}.`);
 
 //Escreva um programa que informe o número de dias em um mês.
 //Digite um mês: Janeiro
@@ -159,6 +159,7 @@ console.log(`${dayType} é um ${day}.`);
 console.log("%c Exercício 8", "color: #FF0000")
 let month = prompt("Digite um mês:").toLowerCase();
 let daysInMonth;
+let ano = new Date().getFullYear();
 
 switch (month) {
   case 'janeiro':
@@ -177,7 +178,12 @@ switch (month) {
     daysInMonth = 30;
     break;
   case 'fevereiro':
-    daysInMonth = 28;
+    if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+      daysInMonth = 29;
+    } else {
+      daysInMonth = 28;
+    }
+    
     break;
   default:
     console.log("Mês inválido");
